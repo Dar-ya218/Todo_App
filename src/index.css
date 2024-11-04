@@ -2,14 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './styles/components.css';
-
-@layer base {
-  body {
-    @apply antialiased;
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-colors;
   }
-}
-
-.dark {
-  color-scheme: dark;
+  
+  .btn-primary {
+    @apply btn bg-blue-500 text-white hover:bg-blue-600;
+  }
+  
+  .btn-danger {
+    @apply btn text-red-500 hover:text-red-600;
+  }
+  
+  .btn-success {
+    @apply btn text-green-500 hover:text-green-600;
+  }
+  
+  .input-primary {
+    @apply w-full px-6 py-4 text-lg bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm p-4 border border-gray-200 dark:border-gray-700 transition-all duration-200;
+  }
+  
+  .icon-button {
+    @apply p-2 transition-colors;
+  }
 }
